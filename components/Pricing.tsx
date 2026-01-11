@@ -71,7 +71,7 @@ export default function Pricing() {
             Simple, Transparent Pricing
           </motion.h2>
           <motion.p variants={fadeInUp} className="section-subtitle">
-            Choose the plan that's right for you. No hidden fees, ever.
+            Choose the plan that&apos;s right for you. No hidden fees, ever.
           </motion.p>
         </motion.div>
 

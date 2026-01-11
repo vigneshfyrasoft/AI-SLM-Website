@@ -37,14 +37,14 @@ const testimonials = [
     name: 'Elena Volkov',
     role: 'Founder at AI Startup',
     avatar: '👩‍💼',
-    content: 'Best ROI we\'ve seen. Reduced costs by 70% while improving model performance. Game changer!',
+    content: 'Best ROI we&apos;ve seen. Reduced costs by 70% while improving model performance. Game changer!',
     rating: 5,
   },
   {
     name: 'David Thompson',
     role: 'Senior Developer',
     avatar: '👨‍💻',
-    content: 'The API is clean, documentation is excellent, and support is responsive. A developer\'s dream.',
+    content: 'The API is clean, documentation is excellent, and support is responsive. A developer&apos;s dream.',
     rating: 5,
   },
 ];
@@ -123,7 +123,7 @@ export default function Testimonials() {
 
                 {/* Content */}
                 <p className="text-gray-300 leading-relaxed">
-                  "{testimonial.content}"
+                  &ldquo;{testimonial.content}&rdquo;
                 </p>
               </motion.div>
             ))}
