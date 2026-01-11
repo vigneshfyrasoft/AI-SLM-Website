@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { fadeIn, fadeInUp, staggerContainer, staggerItem, floatingOrb, floatingOrbSlow, buttonTap } from '@/lib/animations';
+import { fadeInUp, staggerContainer, staggerItem, floatingOrb, floatingOrbSlow } from '@/lib/animations';
 
 const stats = [
   { value: '50K+', label: 'Active Users' },
@@ -107,23 +107,6 @@ export default function Hero() {
             ))}
           </motion.div>
         </motion.div>
-
-        {/* Animated floating orbs */}
-        <motion.div
-          className="orb orb-purple w-96 h-96 top-20 -left-20"
-          variants={floatingOrb}
-          animate="animate"
-        />
-        <motion.div
-          className="orb orb-cyan w-96 h-96 top-40 right-20"
-          variants={floatingOrbSlow}
-          animate="animate"
-        />
-        <motion.div
-          className="orb orb-blue w-64 h-64 bottom-20 left-20"
-          variants={floatingOrb}
-          animate="animate"
-        />
       </div>
     </section>
   );
