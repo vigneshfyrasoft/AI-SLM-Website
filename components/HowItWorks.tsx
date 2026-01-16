@@ -6,27 +6,27 @@ import { fadeInUp, slideInLeft, slideInRight, staggerContainer, viewportOptions 
 const steps = [
   {
     number: '01',
-    title: 'Upload Your Data',
-    description: 'Simply drag and drop your training data. We support CSV, JSON, and text formats.',
-    icon: '📤',
+    title: 'Prepare Domain Data',
+    description: 'Upload specialized datasets for your domain. Our system automatically handles preprocessing and tokenization.',
+    icon: '📚',
   },
   {
     number: '02',
-    title: 'Configure Model',
-    description: 'Choose your model architecture and parameters with our intuitive interface.',
-    icon: '⚙️',
+    title: 'Configure SLM Architecture',
+    description: 'Choose model size (7B, 13B, 30B params). Our guided builder recommends optimal configs for your hardware.',
+    icon: '🏗️',
   },
   {
     number: '03',
-    title: 'Train & Optimize',
-    description: 'Our AI automatically optimizes training. Watch real-time progress and metrics.',
-    icon: '🎓',
+    title: 'Train with Optimization',
+    description: 'Fused kernel acceleration + semantic caching. Train 10x faster. Monitor real-time accuracy improvements.',
+    icon: '⚙️',
   },
   {
     number: '04',
-    title: 'Deploy Anywhere',
-    description: 'Deploy to cloud, edge, or on-premise with a single click. Start serving predictions.',
-    icon: '🚀',
+    title: 'Deploy to Any Device',
+    description: 'One-click deployment to mobile, edge, IoT, or cloud. Your model runs autonomously without cloud dependency.',
+    icon: '🎯',
   },
 ];
 

@@ -5,7 +5,7 @@ import { fadeInUp, scaleIn, staggerContainer, viewportOptions } from '@/lib/anim
 import { useState } from 'react';
 
 export default function Demo() {
-  const [activeTab, setActiveTab] = useState<'code' | 'visual'>('visual');
+  const [activeTab, setActiveTab] = useState<'metrics' | 'code'>('metrics');
 
   return (
     <section className="section-padding relative overflow-hidden">
@@ -18,10 +18,10 @@ export default function Demo() {
           className="text-center mb-16"
         >
           <motion.h2 variants={fadeInUp} className="section-title">
-            See It In Action
+            Experience SLM Performance
           </motion.h2>
           <motion.p variants={fadeInUp} className="section-subtitle">
-            Experience the power of our platform with an interactive demo
+            See real-time model deployment and inference metrics
           </motion.p>
         </motion.div>
 
@@ -37,14 +37,14 @@ export default function Demo() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => setActiveTab('visual')}
+              onClick={() => setActiveTab('metrics')}
               className={`px-8 py-3 rounded-xl font-semibold transition-all ${
-                activeTab === 'visual'
+                activeTab === 'metrics'
                   ? 'btn-gradient'
                   : 'glass hover:glass-strong'
               }`}
             >
-              Visual Builder
+              Live Metrics
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -56,7 +56,7 @@ export default function Demo() {
                   : 'glass hover:glass-strong'
               }`}
             >
-              Code API
+              Edge Deployment
             </motion.button>
           </div>
 
@@ -68,29 +68,35 @@ export default function Demo() {
             transition={{ duration: 0.5 }}
             className="liquid-glass p-8 md:p-12 rounded-3xl"
           >
-            {activeTab === 'visual' ? (
+            {activeTab === 'metrics' ? (
               <div className="space-y-6">
                 <div className="glass p-6 rounded-2xl">
                   <h3 className="text-xl font-bold mb-4 gradient-text-static">
-                    Model Configuration
+                    Live SLM Deployment
                   </h3>
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
                       <span className="text-gray-300">Model Type</span>
                       <span className="glass px-4 py-2 rounded-lg text-cyan-400">
-                        Text Generation
+                        SLM-13B (Specialized)
                       </span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-300">Training Data</span>
+                      <span className="text-gray-300">Memory Usage</span>
                       <span className="glass px-4 py-2 rounded-lg text-green-400">
-                        15,000 samples
+                        2.1 GB (84% optimized)
                       </span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-300">Accuracy</span>
+                      <span className="text-gray-300">Inference Latency</span>
                       <span className="glass px-4 py-2 rounded-lg text-purple-400">
-                        94.7%
+                        45ms (edge device)
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-300">Task Accuracy</span>
+                      <span className="glass px-4 py-2 rounded-lg text-orange-400">
+                        96.2% (domain-specific)
                       </span>
                     </div>
                   </div>
@@ -98,71 +104,111 @@ export default function Demo() {
 
                 <div className="glass p-6 rounded-2xl">
                   <h3 className="text-xl font-bold mb-4 gradient-text-static">
-                    Training Progress
+                    Cost Analysis vs LLMs
                   </h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between text-sm text-gray-400">
-                      <span>Epoch 8/10</span>
-                      <span>80%</span>
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-300">Inference Cost (1M tokens)</span>
+                      <span className="glass px-4 py-2 rounded-lg text-green-400">
+                        $0.08 (vs $2.50 LLM)
+                      </span>
                     </div>
-                    <div className="w-full h-3 bg-gray-800 rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: '80%' }}
-                        transition={{ duration: 2, ease: 'easeOut' }}
-                        className="h-full bg-gradient-to-r from-purple-500 via-cyan-500 to-blue-500"
-                      />
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-300">Memory Savings</span>
+                      <span className="glass px-4 py-2 rounded-lg text-green-400">
+                        84% Reduction (18GB → 2.1GB)
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-300">Hardware Required</span>
+                      <span className="glass px-4 py-2 rounded-lg text-blue-400">
+                        Raspberry Pi / Mobile CPU
+                      </span>
                     </div>
                   </div>
                 </div>
 
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full btn-gradient py-4 rounded-xl font-semibold"
-                >
-                  Deploy Model →
-                </motion.button>
+                <div className="glass p-6 rounded-2xl">
+                  <h3 className="text-xl font-bold mb-4 gradient-text-static">
+                    RAG Performance
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-300">Accuracy Improvement</span>
+                      <span className="glass px-4 py-2 rounded-lg text-green-400">
+                        70% Better than Traditional RAG
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-gray-300">Semantic Caching</span>
+                      <span className="glass px-4 py-2 rounded-lg text-blue-400">
+                        73% Cost Reduction
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             ) : (
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold mb-4 gradient-text-static">
-                  Quick Start Code
-                </h3>
-                <div className="bg-[#1a1a2e] p-6 rounded-xl font-mono text-sm overflow-x-auto">
-                  <pre className="text-gray-300">
-                    <code>{`// Install the SDK
-npm install @ai-slm/sdk
-
-// Initialize client
-import { AIClient } from '@ai-slm/sdk';
-
-const client = new AIClient({
-  apiKey: 'your-api-key'
+              <div className="space-y-6">
+                <div className="glass p-6 rounded-2xl">
+                  <h3 className="text-xl font-bold mb-4 gradient-text-static">
+                    Deploy to Edge in Minutes
+                  </h3>
+                  <pre className="bg-black/50 p-4 rounded-lg text-sm text-cyan-400 overflow-x-auto font-mono">
+                    {`// 1. Deploy SLM to edge device
+const model = await SLM.deploy({
+  modelId: "slm-13b-medical",
+  hardware: "mobile",
+  optimization: "fused-kernels",
+  quantization: "4-bit"
 });
 
-// Train a model
-const model = await client.train({
-  type: 'text-generation',
-  data: trainingData,
-  config: {
-    epochs: 10,
-    batchSize: 32
+// 2. Run inference locally - no cloud!
+const result = await model.inference(
+  "Classify patient symptoms",
+  { latency: "45ms", privacy: "on-device" }
+);
+
+// 3. Monitor performance
+console.log({
+  inference_ms: 45,
+  memory_mb: 2100,
+  accuracy: 0.962,
+  cost_per_1M_tokens: 0.08
+});`}
+                  </pre>
+                </div>
+
+                <div className="glass p-6 rounded-2xl">
+                  <h3 className="text-xl font-bold mb-4 gradient-text-static">
+                    Hybrid RAG with SLM
+                  </h3>
+                  <pre className="bg-black/50 p-4 rounded-lg text-sm text-green-400 overflow-x-auto font-mono">
+                    {`// Combine SLM reasoning + semantic retrieval
+const response = await model.ragQuery({
+  prompt: "Find similar medical cases",
+  retrieverConfig: {
+    type: "semantic-cache",
+    indexSize: "local"
+  },
+  metrics: {
+    accuracy: 0.94,  // 20% better
+    latency_ms: 78,
+    cost_reduction: 0.73
   }
 });
 
-// Deploy and predict
-const prediction = await model.predict({
-  input: 'Your prompt here'
-});`}</code>
+// Works entirely on edge - HIPAA compliant
+// No data leaves the device`}
                   </pre>
                 </div>
+
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full btn-gradient py-4 rounded-xl font-semibold"
+                  className="w-full btn-gradient py-4 rounded-xl font-semibold mt-4"
                 >
-                  View Documentation →
+                  Start Building →
                 </motion.button>
               </div>
             )}

@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer, staggerItem, floatingOrb, floatingOrbSlow } from '@/lib/animations';
 
 const stats = [
-  { value: '50K+', label: 'Active Users' },
-  { value: '100K+', label: 'Models Trained' },
-  { value: '99.9%', label: 'Uptime' },
-  { value: '10x', label: 'Faster Training' },
+  { value: '84%', label: 'Memory Reduction' },
+  { value: '31x', label: 'Cost Savings' },
+  { value: '45ms', label: 'Edge Latency' },
+  { value: '96%+', label: 'Accuracy' },
 ];
 
 export default function Hero() {
@@ -50,10 +50,10 @@ export default function Hero() {
             variants={fadeInUp}
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
           >
-            Build Powerful{' '}
-            <span className="gradient-text">AI Models</span>
+            Enterprise AI at{' '}
+            <span className="gradient-text">Edge Speed</span>
             <br />
-            Without the Complexity
+            Without the Cloud Cost
           </motion.h1>
 
           {/* Subtitle */}
@@ -61,8 +61,8 @@ export default function Hero() {
             variants={fadeInUp}
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
-            Create, train, and deploy custom Small Language Models in minutes.
-            No PhD required. No GPU clusters needed.
+            Deploy specialized Small Language Models that run 10x faster on edge devices, 
+            use 84% less memory, and cost a fraction of LLMs—while maintaining enterprise-grade accuracy.
           </motion.p>
 
           {/* CTA Buttons */}

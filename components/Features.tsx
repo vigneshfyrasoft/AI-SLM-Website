@@ -5,44 +5,44 @@ import { fadeInUp, staggerContainer, staggerItem, viewportOptions } from '@/lib/
 
 const features = [
   {
-    icon: '🚀',
-    title: 'Lightning Fast Training',
-    description: 'Train models 10x faster with our optimized infrastructure. Get results in minutes, not hours.',
+    icon: '⚡',
+    title: 'Mobile & Edge First',
+    description: 'Deploy directly to mobile devices, IoT sensors, and edge servers. Instant inference with zero cloud latency.',
   },
   {
-    icon: '🎯',
-    title: 'Precision Tuning',
-    description: 'Fine-tune models with surgical precision. Achieve accuracy that rivals larger models.',
+    icon: '💰',
+    title: '84% Memory Reduction',
+    description: 'Our fused kernel optimization cuts memory usage dramatically. Run SLMs on devices that LLMs cannot touch.',
+  },
+  {
+    icon: '🧠',
+    title: 'Contextual Retrieval',
+    description: 'Hybrid architecture combining SLM reasoning with semantic retrieval. 70% better accuracy than traditional RAG.',
   },
   {
     icon: '🔒',
-    title: 'Enterprise Security',
-    description: 'Bank-grade encryption and compliance. Your data stays private and secure.',
+    title: 'Data Privacy First',
+    description: 'Train and inference entirely on-device. Zero data transmission. Perfect for regulated industries.',
   },
   {
-    icon: '⚡',
-    title: 'Edge Deployment',
-    description: 'Deploy models to edge devices with zero latency. Run AI anywhere, anytime.',
+    icon: '🎯',
+    title: 'Domain Specialization',
+    description: 'Fine-tune SLMs for specific domains. Achieves 94%+ accuracy on specialized tasks with minimal data.',
   },
   {
     icon: '📊',
-    title: 'Real-time Analytics',
-    description: 'Monitor model performance with live metrics. Optimize on the fly with actionable insights.',
+    title: 'Cost-Efficient Inference',
+    description: '1/20th the inference cost of large models. Semantic caching cuts API bills by 73% automatically.',
   },
   {
     icon: '🔄',
-    title: 'Auto-Optimization',
-    description: 'AI-powered model optimization. Continuously improve performance without manual tuning.',
+    title: 'Federated Learning',
+    description: 'Train models where data lives. Collaborative learning across multiple parties without data sharing.',
   },
   {
-    icon: '🌐',
-    title: 'Multi-Language Support',
-    description: 'Train models in 100+ languages. Break language barriers with ease.',
-  },
-  {
-    icon: '🎨',
-    title: 'No-Code Interface',
-    description: 'Visual model builder with drag-and-drop simplicity. Build AI without writing code.',
+    icon: '🚀',
+    title: 'Agentic AI Ready',
+    description: 'Build multi-agent systems with orchestration-first design. Proven framework for complex workflows.',
   },
 ];
 
